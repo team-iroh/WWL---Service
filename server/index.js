@@ -36,19 +36,19 @@ app.get('/api/comments/:id', function (req, res) {
   })
 });
 
-app.get('/api/update/', function (req, res) {
-  db.Update.findAll()
-  .then(function(data){
-    res.status(200).send(data);
-  })
-});
+// app.get('/api/update/', function (req, res) {
+//   db.Update.findAll()
+//   .then(function(data){
+//     res.status(200).send(data);
+//   })
+// });
 
-app.get('/api/comments/', function (req, res) {
-  db.Comment.findAll()
-  .then(function(data){
-    res.status(200).send(data);
-  })
-});
+// app.get('/api/comments/', function (req, res) {
+//   db.Comment.findAll()
+//   .then(function(data){
+//     res.status(200).send(data);
+//   })
+// });
 
 ///////////////////////////////////
 ////////////Routes/////////////////
