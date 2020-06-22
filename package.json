@@ -1,17 +1,31 @@
 {
-  "name": "",
-  "version": "",
-  "description": "",
-  "author": "",
-  "license": "",
-  "engines": {
-    "node": ">=6.13.0"
-  },
-  "scripts": {
-  },
+  "name": "wwl---service",
+  "version": "1.0.0",
+  "description": "> Project description",
+  "main": "./server/index.js",
   "dependencies": {
+    "express": "^4.17.1",
+    "faker": "^4.1.0",
+    "jquery": "^3.5.1",
+    "morgan": "^1.10.0",
+    "mysql": "^2.18.1",
+    "mysql2": "^2.1.0",
+    "sequelize": "^5.21.13"
   },
-  "devDependencies": {
-    "eslint-config-hackreactor": "git://github.com/reactorcore/eslint-config-hackreactor"
-  }
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "nodemon server/index.js",
+    "db:setup": "node db/seedData.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/team-iroh/WWL---Service.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/team-iroh/WWL---Service/issues"
+  },
+  "homepage": "https://github.com/team-iroh/WWL---Service#readme"
 }
