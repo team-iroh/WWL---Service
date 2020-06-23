@@ -65,5 +65,3 @@ const Comment = sequelize.define('Comment', {
 //had { force: true } in pranthesis below:
 sequelize.sync();
 
-module.exports.Update = Update;
-module.exports.Comment = Comment;

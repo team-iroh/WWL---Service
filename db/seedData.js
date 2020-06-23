@@ -7,7 +7,7 @@ const insertSampleUpdates = function() {
     db.Update.create({
       title: faker.lorem.words(),
       author: faker.name.findName(),
-      //Will need to return to this to use API calls to some database that Vasan and Orlando have
+      //Will need to return to this to use API calls to Search Results Amazon S3 - Amazon Web Services
       imageUrl: faker.image.imageUrl(),
       createdAt: faker.date.past(),
       body: faker.lorem.paragraph(),
@@ -30,3 +30,7 @@ const insertSampleComments = function() {
 
 insertSampleUpdates()
 insertSampleComments()
+
+
+module.exports.insertSampleUpdates = insertSampleUpdates;
+module.exports.insertSampleComments = insertSampleComments;

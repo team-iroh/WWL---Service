@@ -12,9 +12,12 @@
     "mysql2": "^2.1.0",
     "sequelize": "^5.21.13"
   },
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-jest": "^26.0.1",
+    "jest": "^26.0.1"
+  },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "start": "nodemon server/index.js",
     "db:setup": "node db/seedData.js"
   },
