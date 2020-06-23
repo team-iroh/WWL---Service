@@ -10,7 +10,7 @@ sequelize.authenticate()
   .catch(function(errors) {console.log('Unable to connect to the database:', error)})
 
 class Update extends Model {}
-
+//
 Update.init({
   title: {
     type: DataTypes.STRING,
