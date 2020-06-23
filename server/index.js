@@ -58,6 +58,3 @@ app.get('/api/comments/', function (req, res) {
 
 
 app.listen(port, () => console.log(`listening at http://localhost:${port}`))
-
-
-// Show one or more API calls working with sample data	link to Github Gist (show url and sample json output)
