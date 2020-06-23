@@ -47,7 +47,8 @@ jobs:
           command: dockerize -wait tcp://$HOST:$PORT -timeout 1m
           environment:
             HOST: localhost
-            PORT: 3001
+            # SQL Server actually runs on port 3306
+            PORT: 3306
       # Run npm install on your code from your root package.json file
       - run:
           name: Install Packages
