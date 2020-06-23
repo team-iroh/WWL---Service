@@ -1,4 +1,5 @@
 const db = require('../db/seedData.js');
+require('mysql2/node_modules/iconv-lite').encodingExists('foo');
 
 
 describe('Updates', () => {

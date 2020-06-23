@@ -1,4 +1,6 @@
+require('mysql2/node_modules/iconv-lite').encodingExists('foo');
 const { Sequelize, DataTypes, Model } = require('sequelize');
+
 
 const sequelize = new Sequelize('kickstarter', 'root', null, {
   host: 'localhost',
