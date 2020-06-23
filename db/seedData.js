@@ -1,5 +1,5 @@
 const faker = require('faker');
-const db = require('../db/index.js');
+const db = require('./index.js');
 
 
 const insertSampleUpdates = function() {
