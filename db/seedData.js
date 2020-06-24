@@ -28,8 +28,7 @@ const insertSampleComments = function() {
   }
 };
 
-insertSampleUpdates()
-insertSampleComments()
+
 
 
 module.exports.insertSampleUpdates = insertSampleUpdates;

@@ -1,5 +1,19 @@
-require('mysql2/node_modules/iconv-lite').encodingExists('foo');
+// mysql
+// .createConnection({
+//   user: DATABASE_USER,
+//   password: DATABASE_PASSWORD
+// })
+// .then((sqlConnection) => {
+//   sqlConnection
+//     .query(`CREATE DATABASE IF NOT EXISTS ${DATABASE_NAME};`)
+//     .then(() => {
+//       // Connect to sequelize here!
+//      })
+//
+
+
 const { Sequelize, DataTypes, Model } = require('sequelize');
+const seedData = require('./seedData.js');
 
 
 const sequelize = new Sequelize('kickstarter', 'root', null, {
@@ -8,7 +22,11 @@ const sequelize = new Sequelize('kickstarter', 'root', null, {
 });
 
 sequelize.authenticate()
-  .then(function(errors) {console.log('Connection has been established successfully.')})
+  .then(function(errors) {
+    console.log('Connection has been established successfully.')
+    seedData.insertSampleUpdates()
+    seedData.insertSampleComments()
+  })
   .catch(function(errors) {console.log('Unable to connect to the database:', error)})
 
 class Update extends Model {}
