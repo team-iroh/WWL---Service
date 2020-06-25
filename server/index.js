@@ -29,8 +29,8 @@ app.get('/api/update/:id', function (req, res) {
 });
 
 
-app.get('/api/comments/:id', function (req, res) {
-  db.Comment.findOne({where: {id: req.params.id }})
+app.get('/api/comment/:id', function (req, res) {
+  db.Comment.findAll({where: {updateID: req.params.id }})
   .then(function(data){
     res.status(200).send(data);
   })
@@ -43,10 +43,19 @@ app.get('/api/update/', function (req, res) {
   })
 });
 
-app.get('/api/comments/', function (req, res) {
+app.get('/api/comment/', function (req, res) {
   db.Comment.findAll()
   .then(function(data){
     res.status(200).send(data);
+  })
+});
+
+app.post('/api/comment/', function (req, res) {
+  db.Comment.create({
+    updateID: req.body.updateID,
+    userName: req.body.userName,
+    comment:req.body.comment,
+    createdAt: req.body.createdAt,
   })
 });
 

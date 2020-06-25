@@ -9,7 +9,6 @@
 //     .then(() => {
 //       // Connect to sequelize here!
 //      })
-//
 
 
 const { Sequelize, DataTypes, Model } = require('sequelize');
@@ -56,7 +55,7 @@ Update.init({
     type: DataTypes.INTEGER,
     allowNull: false
   },
-  commentsID: {
+  campaignID: {
     type: DataTypes.INTEGER,
     allowNull: true
   },
@@ -68,6 +67,10 @@ Update.init({
 const Comment = sequelize.define('Comment', {
   // Model attributes are defined here
 
+  updateID: {
+    type: DataTypes.INTEGER,
+    allowNull: true
+  },
   userName: {
     type: DataTypes.STRING,
     allowNull: false
@@ -82,7 +85,8 @@ const Comment = sequelize.define('Comment', {
   },
 }, {});
 
-//had { force: true } in pranthesis below:
+// sequelize.sync({ force: true });
+
 sequelize.sync();
 
 module.exports.Update = Update;

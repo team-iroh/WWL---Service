@@ -5,18 +5,25 @@
   "private": true,
   "main": "./server/index.js",
   "dependencies": {
-    "@babel/core": "^7.10.3",
     "@babel/preset-typescript": "^7.10.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
     "jquery": "^3.5.1",
+    "moment": "^2.27.0",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
+    "react": "^16.13.1",
+    "react-dom": "^16.13.1",
     "sequelize": "^5.21.13"
   },
   "devDependencies": {
+    "@babel/cli": "^7.10.3",
+    "@babel/core": "^7.10.3",
+    "@babel/preset-env": "^7.10.3",
+    "@babel/preset-react": "^7.10.1",
     "babel-jest": "^26.1.0",
+    "babel-loader": "^8.1.0",
     "eslint": "^7.3.1",
     "eslint-plugin-react": "^7.20.0",
     "jest": "^26.1.0",
@@ -25,9 +32,9 @@
   },
   "scripts": {
     "test": "jest",
-    "start": "nodemon server/index.js",
+    "start": "nodemon server/index.js -d --watch",
     "db:setup": "node db/seedData.js",
-    "build": "webpack"
+    "build": "webpack -d --watch"
   },
   "repository": {
     "type": "git",
