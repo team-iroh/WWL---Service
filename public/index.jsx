@@ -11,9 +11,9 @@ class Index extends React.Component {
   constructor(props) {
     super (props)
     this.state = {
-      id: 2,//This is the default id... but how do we set it to render based on the campaign?
+      id: 1,//This is the default id... but how do we set it to render based on the campaign?
       updates: {},
-      comments: {}
+      comments: []
     }
     this.send = this.send.bind(this);
   }
@@ -46,6 +46,7 @@ class Index extends React.Component {
       url: "/api/comment",
       data: thing
     });
+    this.componentDidMount()
   };
 
   render() {

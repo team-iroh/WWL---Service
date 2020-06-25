@@ -1,16 +1,16 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-const faker = require('faker');
+import moment from 'moment';
 
 
 class PostComment extends React.Component {
   constructor(props) {
     super (props);
     this.state = {
-      updateID: 1,// Need to find a way to pass UpdateID in...
+      updateID: 1,
       userName: '',
       comment: '',
-      createdAt: faker.date.past()// Need to find a date format that works
+      createdAt: moment().format()
     }
     this.handleInputChange = this.handleInputChange.bind(this)
     this.submit = this.submit.bind(this)
@@ -21,12 +21,13 @@ class PostComment extends React.Component {
     const value = target.value;
     const name = target.className;
     this.setState({
-      [name]: value
+      [name]: value,
+      updateID: this.props.updatesID,
+      createdAt: moment().format()
     });
   }
 
   submit() {
-    console.log(this.state)
     this.props.onSubmit(this.state);
   }
 

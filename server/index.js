@@ -57,6 +57,9 @@ app.post('/api/comment/', function (req, res) {
     comment:req.body.comment,
     createdAt: req.body.createdAt,
   })
+  .then(function(){
+    res.send('sent to server');
+  })
 });
 
 ///////////////////////////////////
