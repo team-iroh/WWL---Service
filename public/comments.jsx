@@ -9,21 +9,21 @@ import moment from 'moment';
 
     const commentsList = props.comment
     const listItems = commentsList.map((postedComment) =>
-    <div className="comment" key = {postedComment.id}>
-      <div className="comment-item">
+      <div className="comment-item" key = {postedComment.id}>
         <span className="comment-item-author">
           {postedComment.userName}
         </span>
         {moment(postedComment.createdAt).fromNow()}
+        <span className="comment-item-comment">
+          {postedComment.comment}
+        </span>
       </div>
-      <span className="comment-item-comment">
-        {postedComment.comment}
-      </span>
-    </div>
     )
     return (
       <div id="comments">
-        {listItems}
+        <div className="comment" >
+          {listItems}
+        </div>
       </div>
     )
   }

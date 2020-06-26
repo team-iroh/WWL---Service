@@ -28,7 +28,7 @@ class Updates extends React.Component {
             {body}
           </p>
           <div className="update-likes">
-            Likes: {likes}
+             {likes} people like this update
           </div>
         </div>
       </div>

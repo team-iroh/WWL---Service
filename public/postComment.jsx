@@ -34,20 +34,16 @@ class PostComment extends React.Component {
   render (){
     return(
       <div className="create">
-        <ul>
-          {
-          <div className="create">
-            <div className="create-editor">
-              <h2>AUTHOR</h2>
-              <div>
-                <input className="userName" type="text"  placeholder="userName" onChange={this.handleInputChange}></input>
-                <textarea className="comment"  type="text" placeholder="Comment" onChange={this.handleInputChange}></textarea>
-                <button className="create-submit-button" onClick={this.submit}>Post Comment</button>
-              </div>
+        <div className="create">
+            <div className="create-section-header">Comments</div>
+          <div className="create-editor">
+            <div>
+              <input className="create-userName" type="text"  placeholder="Username" onChange={this.handleInputChange}></input>
+              <textarea className="create-comment"  type="text" placeholder="What would you like to say" onChange={this.handleInputChange}></textarea>
+              <button className="create-submit-button" onClick={this.submit}>Post Comment</button>
             </div>
           </div>
-          }
-        </ul>
+        </div>
       </div>
     );
   }
