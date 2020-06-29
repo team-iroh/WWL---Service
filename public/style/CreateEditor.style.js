@@ -1,0 +1,52 @@
+import styled from 'styled-components';
+
+const CreateEditor = styled.div`
+align-items:flex-start;
+align-self:stretch;
+background-color:rgb(255, 255, 255);
+border-bottom-color:rgb(40, 40, 40);
+border-bottom-style:solid;
+border-bottom-width:1px;
+border-image-outset:0;
+border-image-repeat:stretch;
+border-image-slice:100%;
+border-image-source:none;
+border-image-width:1;
+border-left-color:rgb(40, 40, 40);
+border-left-style:solid;
+border-left-width:1px;
+border-right-color:rgb(40, 40, 40);
+border-right-style:solid;
+border-right-width:1px;
+border-top-color:rgb(40, 40, 40);
+border-top-style:solid;
+border-top-width:1px;
+box-sizing:border-box;
+color:rgb(40, 40, 40);
+display:flex;
+font-family:"Maison Neue Book", "Helvetica Neue", Helvetica, Arial, sans-serif;
+font-size:14px;
+font-stretch:100%;
+font-style:normal;
+font-variant-caps:normal;
+font-variant-east-asian:normal;
+font-variant-ligatures:normal;
+font-variant-numeric:normal;
+font-weight:400;
+height:180px;
+line-height:21px;
+margin-bottom:12px;
+margin-left:12px;
+margin-right:12px;
+margin-top:0px;
+padding-bottom:18px;
+padding-left:18px;
+padding-right:18px;
+padding-top:18px;
+vertical-align:baseline;
+width:642.656px;
+-webkit-box-align:start;
+-webkit-font-smoothing:antialiased;
+`
+
+export default CreateEditor;

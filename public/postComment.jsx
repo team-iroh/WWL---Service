@@ -1,6 +1,13 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
+import Create from './style/Create.style.js';
+import CreateSectionHeader from './style/CreateSectionHeader.style.js';
+import CreateEditor from './style/CreateEditor.style.js';
+
+import CreateUsername from './style/CreateUsername.style.js';
+import CreateComment from './style/CreateUsername.style.js';
+import CreateButton from './style/CreateButton.style.js';
 
 
 class PostComment extends React.Component {
@@ -19,7 +26,7 @@ class PostComment extends React.Component {
   handleInputChange(event) {
     const target = event.target;
     const value = target.value;
-    const name = target.className;
+    const name = target.id;
     this.setState({
       [name]: value,
       updateID: this.props.updatesID,
@@ -28,23 +35,24 @@ class PostComment extends React.Component {
   }
 
   submit() {
+    console.log(this.state)
     this.props.onSubmit(this.state);
   }
 
   render (){
     return(
-      <div className="create">
-        <div className="create">
-            <div className="create-section-header">Comments</div>
-          <div className="create-editor">
+      <Create>
+        <Create>
+            <CreateSectionHeader>Comments</CreateSectionHeader>
+          <CreateEditor>
             <div>
-              <input className="create-userName" type="text"  placeholder="Username" onChange={this.handleInputChange}></input>
-              <textarea className="create-comment"  type="text" placeholder="What would you like to say" onChange={this.handleInputChange}></textarea>
-              <button className="create-submit-button" onClick={this.submit}>Post Comment</button>
+              <CreateUsername id='userName' type="text"  placeholder="Username" onChange={this.handleInputChange}></CreateUsername>
+              <CreateComment id='comment' type="text" placeholder="What would you like to say" onChange={this.handleInputChange}></CreateComment>
+              <CreateButton onClick={this.submit}>Post Comment</CreateButton>
             </div>
-          </div>
-        </div>
-      </div>
+          </CreateEditor>
+        </Create>
+      </Create>
     );
   }
 }

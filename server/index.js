@@ -36,7 +36,7 @@ app.get('/api/comment/:id', function (req, res) {
   })
 });
 
-app.get('/api/update/', function (req, res) {
+const GetAllUpdates = app.get('/api/update/', function (req, res) {
   db.Update.findAll()
   .then(function(data){
     res.status(200).send(data);
@@ -67,6 +67,7 @@ app.post('/api/comment/', function (req, res) {
 ///////////////////////////////////
 
 
+module.exports.GetAllUpdates = GetAllUpdates;
 
 
 app.listen(port, () => console.log(`listening at http://localhost:${port}`))

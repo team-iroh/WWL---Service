@@ -6,8 +6,12 @@
   "main": "./server/index.js",
   "dependencies": {
     "@babel/preset-typescript": "^7.10.1",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
     "express": "^4.17.1",
     "faker": "^4.1.0",
+    "jest-environment-enzyme": "^7.1.2",
+    "jest-enzyme": "^7.1.2",
     "jquery": "^3.5.1",
     "moment": "^2.27.0",
     "morgan": "^1.10.0",
@@ -15,6 +19,7 @@
     "mysql2": "^2.1.0",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
+    "react-test-renderer": "^16.13.1",
     "sequelize": "^5.21.13",
     "styled-components": "^5.1.1"
   },
@@ -32,7 +37,7 @@
     "webpack-cli": "^3.3.12"
   },
   "scripts": {
-    "test": "jest",
+    "test": "jest --forceExit --detectOpenHandles",
     "start": "nodemon server/index.js -d --watch",
     "db:setup": "node db/seedData.js",
     "build": "webpack -d --watch"
@@ -46,8 +51,16 @@
   "bugs": {
     "url": "https://github.com/team-iroh/WWL---Service/issues"
   },
-    "resolutions": {
-      "styled-components": "^5"
-    },
+  "jest": {
+    "setupFilesAfterEnv": [
+      "./src/setupTest.js"
+    ],
+    "testEnvironmentOptions": {
+      "enzymeAdapter": "react16"
+    }
+  },
+  "resolutions": {
+    "styled-components": "^5"
+  },
   "homepage": "https://github.com/team-iroh/WWL---Service#readme"
 }

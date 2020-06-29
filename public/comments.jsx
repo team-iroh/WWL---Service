@@ -1,6 +1,10 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import moment from 'moment';
+import CommentsDiv from './style/Comments.style.js';
+import CommentsAuthor from './style/CommentsAuthor.style.js';
+import CommentsBody from './style/CommentsBody.style.js';
+import CommentsItem from './style/CommentsItem.style.js';
 
 
   function Comments(props){
@@ -9,21 +13,21 @@ import moment from 'moment';
 
     const commentsList = props.comment
     const listItems = commentsList.map((postedComment) =>
-      <div className="comment-item" key = {postedComment.id}>
-        <span className="comment-item-author">
+      <CommentsItem key = {postedComment.id}>
+        <CommentsAuthor>
           {postedComment.userName}
-        </span>
+        </CommentsAuthor>
         {moment(postedComment.createdAt).fromNow()}
-        <span className="comment-item-comment">
+        <CommentsBody>
           {postedComment.comment}
-        </span>
-      </div>
+        </CommentsBody>
+      </CommentsItem>
     )
     return (
       <div id="comments">
-        <div className="comment" >
+        <CommentsDiv >
           {listItems}
-        </div>
+        </CommentsDiv>
       </div>
     )
   }

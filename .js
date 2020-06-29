@@ -12,7 +12,7 @@ module.exports = {
   // cacheDirectory: "/private/var/folders/dt/38bgks7x05q8q2x1dy6vbfxw0000gp/T/jest_dy",
 
   // Automatically clear mock calls and instances between every test
-  clearMocks: true,
+  // clearMocks: false,
 
   // Indicates whether the coverage information should be collected while executing the test
   // collectCoverage: false,
@@ -132,7 +132,7 @@ module.exports = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  testEnvironment: "node",
+  // testEnvironment: "jest-environment-jsdom",
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
