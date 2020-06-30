@@ -3,7 +3,7 @@ const db = require('./index.js');
 
 
 const insertSampleUpdates = function() {
-  for(var i = 0; i < 1; i++) {
+  for(var i = 0; i < 100; i++) {
     db.Update.create({
       title: faker.lorem.words(),
       author: faker.name.findName(),
@@ -19,7 +19,7 @@ const insertSampleUpdates = function() {
 
 
 const insertSampleComments = function() {
-  for(var i = 0; i < 1; i++) {
+  for(var i = 0; i < 100; i++) {
     db.Comment.create({
       updateID: Math.ceil(Math.random()*100),
       userName: faker.name.findName(),
@@ -28,7 +28,6 @@ const insertSampleComments = function() {
     })
   }
 };
-
 
 
 

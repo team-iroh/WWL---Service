@@ -6,7 +6,7 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
 
-const db = require('../db/index.js');
+const db = require('../db/index.js');//Line of code causing bugs
 // const Comment = require('../db/index.js');
 
 
@@ -20,7 +20,7 @@ app.use(bodyParser.urlencoded({ extended: true }));
 ////////////Routes/////////////////
 ///////////////////////////////////
 
-//to do Test the code to see if it works
+// to do Test the code to see if it works
 app.get('/api/update/:id', function (req, res) {
   db.Update.findOne({where: {id: req.params.id }})
   .then(function(data){
@@ -67,7 +67,7 @@ app.post('/api/comment/', function (req, res) {
 ///////////////////////////////////
 
 
-module.exports.GetAllUpdates = GetAllUpdates;
+// module.exports.GetAllUpdates = GetAllUpdates;
 
 
 app.listen(port, () => console.log(`listening at http://localhost:${port}`))

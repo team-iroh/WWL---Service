@@ -39,7 +39,7 @@
   "scripts": {
     "test": "jest --forceExit --detectOpenHandles",
     "start": "nodemon server/index.js -d --watch",
-    "db:setup": "node db/seedData.js",
+    "db:setup": "node db/seedScript.js",
     "build": "webpack -d --watch"
   },
   "repository": {

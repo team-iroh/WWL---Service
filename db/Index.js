@@ -12,7 +12,6 @@
 
 
 const { Sequelize, DataTypes, Model } = require('sequelize');
-const seedData = require('./seedData.js');
 
 
 const sequelize = new Sequelize('kickstarter', 'root', null, {
@@ -23,13 +22,10 @@ const sequelize = new Sequelize('kickstarter', 'root', null, {
 sequelize.authenticate()
   .then(function(errors) {
     console.log('Connection has been established successfully.')
-    seedData.insertSampleUpdates()
-    seedData.insertSampleComments()
   })
   .catch(function(errors) {console.log('Unable to connect to the database:', error)})
 
 class Update extends Model {}
-//
 Update.init({
   title: {
     type: DataTypes.STRING,
@@ -83,9 +79,10 @@ const Comment = sequelize.define('Comment', {
     type: DataTypes.DATE,
     allowNull: false
   },
-}, {});
-
-// sequelize.sync({ force: true });
+}, {
+  sequelize,
+  modelName: 'Comment',
+});
 
 sequelize.sync();
 
