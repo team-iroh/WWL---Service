@@ -1,6 +1,7 @@
 
 const express = require('express')
 const app = express()
+const cors = require('cors')
 const port = 3001
 const morgan = require('morgan')
 const bodyParser = require('body-parser')
@@ -10,7 +11,7 @@ const db = require('../db/index.js');//Line of code causing bugs
 // const Comment = require('../db/index.js');
 
 
-
+app.use(cors())
 app.use(morgan())
 app.use('/', express.static('dist'))
 app.use(bodyParser.json());
