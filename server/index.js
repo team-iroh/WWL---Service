@@ -7,9 +7,7 @@ const morgan = require('morgan')
 const bodyParser = require('body-parser')
 
 
-const db = require('../db/index.js');//Line of code causing bugs
-// const Comment = require('../db/index.js');
-
+const db = require('../db/index.js');
 
 app.use(cors())
 app.use(morgan())
