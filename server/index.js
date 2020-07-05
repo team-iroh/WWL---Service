@@ -24,17 +24,11 @@ app.use(cors());//http-proxy-middleware instead of cors?
 // });
 
 
-
-///////////////////////////////////
-////////////Routes/////////////////
-///////////////////////////////////
-
 app.use(express.static(path.join(__dirname, '../dist')));
 
 
-app.get('/:id', (req, res) => {// id here?
-  // res.send('Invoked')
-  res.sendFile(path.join(__dirname, '../dist', 'index.html'));//What's going on with sendFIle. why not model after our own thing?
+app.get('/:id', (req, res) => {
+  res.sendFile(path.join(__dirname, '../dist', 'index.html'));
 });
 
 
@@ -85,9 +79,7 @@ app.post('/api/comment/', function (req, res) {
 //   res.sendFile(path.join(__dirname, ‘../dist’, ‘index.html’));
 // });
 
-///////////////////////////////////
-////////////Routes/////////////////
-///////////////////////////////////
+
 
 
 // module.exports.GetAllUpdates = GetAllUpdates;
