@@ -24,14 +24,14 @@ class Index extends React.Component {
     //consider relative path?
     $.ajax({
       type: 'GET',
-      url: `http://localhost:3001/api/update${window.location.pathname}`
+      url: `/api/update${window.location.pathname}`
     }).then((results) =>{
       this.setState({
         updates: results
       });
       $.ajax({
         type: 'GET',
-        url: `http://localhost:3001/api/comment/${results.id}`
+        url: `/api/comment/${results.id}`
       }).then((res) =>{
         this.setState({
           comments: res
