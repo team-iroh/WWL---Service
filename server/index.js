@@ -6,7 +6,7 @@ const path = require('path');
 const port = 3001;
 const morgan = require('morgan');
 const bodyParser = require('body-parser');
-const db = require('../db/index.js');
+const db = require('../db/Index.js');
 
 
 app.use(morgan());
