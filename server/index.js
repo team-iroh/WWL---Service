@@ -85,4 +85,4 @@ app.post('/api/comment/', function (req, res) {
 // module.exports.GetAllUpdates = GetAllUpdates;
 
 
-app.listen(port, () => console.log(`listening at http://ec2204236252122-gu9hddd.compute-1.amazonaws.com:${port}`))
+app.listen(port, () => console.log(`listening at http://localhost:${port}`))
