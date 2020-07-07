@@ -15,7 +15,7 @@ const { Sequelize, DataTypes, Model } = require('sequelize');
 
 
 const sequelize = new Sequelize('kickstarter', 'root', null, {
-  host: 'localhost',
+  host: '127.0.0.1',
   dialect: 'mysql'
 });
 
