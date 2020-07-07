@@ -23,7 +23,7 @@ sequelize.authenticate()
   .then(function(errors) {
     console.log('Connection has been established successfully.')
   })
-  .catch(function(errors) {console.log('Unable to connect to the database:', error)})
+  .catch(function(errors) {console.log('Unable to connect to the database:', errors)})
 
 class Update extends Model {}
 Update.init({
