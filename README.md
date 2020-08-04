@@ -27,6 +27,7 @@
 1. [Requirements](#requirements)
 1. [Development](#development)
 1. [Run Tests](#run-tests)
+1. [API](#api)
 
 ## Usage
 
@@ -52,12 +53,19 @@ npm install -g webpack
 npm install
 ```
 
-
 ## Run tests
 
 ```bash
 npm run test
 ```
+
+## API
+
+GET - endpoint :/api/update/:id result: Pulls update data from the database depending on id
+
+GET - endpoint :/api/comment/:id result: Pulls comments data from the database depending on id
+
+POST - endpoint : /api/comment/  result: Posts comment data to the database using the Update id it pertains when the update is rendered at the client
 
 ## Author
 
