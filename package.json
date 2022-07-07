@@ -14,7 +14,7 @@
     "jest-environment-enzyme": "^7.1.2",
     "jest-enzyme": "^7.1.2",
     "jquery": "^3.5.1",
-    "moment": "^2.27.0",
+    "moment": "^2.29.4",
     "morgan": "^1.10.0",
     "mysql": "^2.18.1",
     "mysql2": "^2.1.0",
